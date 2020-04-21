@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int iosip(int n,int k)
+{
+if (n>1)
+    return (iosip(n-1,k)+k-1)%n+1;
+else
+    return 1;
+}
+
+int main() {
+    system("chcp 65001");
+    printf("Задача Йосипа\n");
+    int n,k;
+    printf("Введіть кількість:\n");
+    scanf("%d",&n);
+    printf("Введіть крок:\n");
+    scanf("%d",&k);
+    printf("%s%d","В живих залишиться під номером ",iosip(n,k));
+    return 0;
+}
